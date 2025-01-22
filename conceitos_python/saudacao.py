@@ -1,11 +1,15 @@
 horario = input("Que horas são? ")
-if horario.isdigit():
+
+try:
     horario = int(horario)
-    if horario < 0 or horario > 23:
-        print("Horário inválido")
-    elif horario < 12:
+    if horario >= 0 and horario <= 11:
         print("Bom dia")
-    elif horario > 12 and horario < 18:
+
+    elif horario >= 12 and horario <= 17:
         print("Boa tarde")
+    
     else:
         print("Boa noite")
+
+except:
+    print("Por favor, apenas número inteiros")
